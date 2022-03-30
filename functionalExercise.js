@@ -37,4 +37,48 @@ const sus = {
 function susWeaponLocation({weapon, location}) {
   return weapon + ' in ' + location;
 }
+//Array declaration
+var susp = [
+    {
+      name: "Michael",
+      weapon: "Shotgun"
+    }, {
+      name: "Oswald",
+      weapon: "Wire"
+    }
+  ]
 
+
+//Array destructure
+var [firstSus, secondSus] = susp
+var [{weapon: weapon1}, {weapon: weapon2}] = susp;
+
+
+//Looping exercise
+const game = {
+  'suspects': [
+    {
+      name: "Michael",
+      weapon: "Shotgun"
+    }, {
+      name: "Oswald",
+      weapon: "Wire"
+    }
+  ]
+}
+
+var gameLoop = function() {
+  for (var i = 0; i < game.suspects.length; i++) {
+    console.log(`Outer loop `)
+    for (var key in game.suspects[i]) {
+      console.log(`inner loop`)
+      if (game.suspects[i] [key] === "Michael") {
+        console.log(`Found 'em `)
+      } else {
+        console.log(`Next time`)
+      }
+    }
+  }
+}
+
+gameLoop()
