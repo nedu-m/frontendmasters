@@ -82,3 +82,25 @@ var gameLoop = function() {
 }
 
 gameLoop()
+
+//List transformations
+function CreateSuspects(name) {
+  return {
+    name: name,
+    color: name.split(' ')[1],
+    speak() {
+      console.log("my name is", name);
+    }
+  };
+};
+
+var suspects = ['Miss Scarlet', 'Col Black', 'Mr White'];
+
+var suspectsList = [];
+
+for(var i = 0; i < suspects.length; i++) {
+  suspect = CreateSuspects(suspects[i])
+  suspectsList.push(suspect)
+}
+
+suspectsList
