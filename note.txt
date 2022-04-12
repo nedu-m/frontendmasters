@@ -1,0 +1,11 @@
+map takes a list and a callback function(list,cb)...returns an arr
+
+filter takes an arr and a callback function(arr, cb)...returns a list
+
+each takes an item a callback function(item, i, list)...returns the object or list of objects
+E.g
+_.each(arr, function(item, i, list) {
+    if (callback(item, i, list) === true) {
+      storage.push(item)
+    }
+});
